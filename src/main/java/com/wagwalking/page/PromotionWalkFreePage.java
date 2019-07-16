@@ -23,6 +23,8 @@ public class PromotionWalkFreePage extends BasePage{
 
     @FindBy(css = "input[type = \"tel")
     WebElement telField;
+    @FindBy(css = ".sc-bdVaJa.sc-iwsKbI.kOShw")
+    WebElement requiredEmailField;
 
 
 
@@ -48,6 +50,16 @@ public class PromotionWalkFreePage extends BasePage{
     public  void inputTel(String tel) {
 
         telField.sendKeys(tel);
+    }
+    public void clickEmailField() {
+        emailField.click();
+    }
+    public void clickPasswordField() {
+        passwordField.click();
+    }
+    public String getReuiredEmailNote(){
+        return requiredEmailField.getText();
+
     }
 
 
