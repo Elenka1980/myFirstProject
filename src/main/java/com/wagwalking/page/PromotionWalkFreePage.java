@@ -4,11 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class PromotionWalkFreePage extends BasePage{
 
     public PromotionWalkFreePage(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(css = "input[name=\"email\"]")
     WebElement emailField;
 
@@ -22,11 +25,29 @@ public class PromotionWalkFreePage extends BasePage{
      WebElement lastNameField;
 
     @FindBy(css = "input[type = \"tel")
-    WebElement telField;
+    WebElement cellPhoneField;
+
+
     @FindBy(css = ".sc-bdVaJa.sc-iwsKbI.kOShw")
-    WebElement requiredEmailField;
+    private List<WebElement>requiredFields;
+
+    /*
+    [0] - email required
+    [1] - firs
+    [2] - last
+    [3] - phone
+     */
 
 
+    @FindBy(css = ".sc-gzVnrw.fzplxK")
+    private List<WebElement>verifyPassward;
+
+    /*
+    [0] - 8 characters
+    [1] - 1 Letter
+    [2] - 1 Number
+
+  */
 
     public void inputEmail(String email) {
 
@@ -47,20 +68,83 @@ public class PromotionWalkFreePage extends BasePage{
 
         lastNameField.sendKeys(lastName);
     }
-    public  void inputTel(String tel) {
+    public  void inputCellPhone(String cellPhone) {
 
-        telField.sendKeys(tel);
+        cellPhoneField.sendKeys(cellPhone);
     }
+
+
     public void clickEmailField() {
         emailField.click();
     }
+
     public void clickPasswordField() {
         passwordField.click();
-    }
-    public String getReuiredEmailNote(){
-        return requiredEmailField.getText();
 
     }
+    public void clickLastName() {
+        lastNameField.click();
+    }
+    public void clickFirstName() {
+        firstNameField.click();
+    }
+
+    public void clickCellPhone() {
+        cellPhoneField.click();
+
+    }
+
+    public String getRequiredEmail() {
+        return requiredFields.get(0).getText();
+    }
+    public String getRequiredFirstName() {
+        return requiredFields.get(1).getText();
+    }
+    public String getRequiredLastName() {
+        return requiredFields.get(2).getText();
+    }
+    public String getRequiredCellPhone() {
+        return requiredFields.get(3).getText();
+    }
+
+
+
+    public String getPasswordField8Characters() {
+        return verifyPassward.get(0).getText();
+    }
+    public String getPasswordField1Letter() {
+        return verifyPassward.get(1).getText();
+    }
+    public String getPasswordField1Number() {
+        return verifyPassward.get(2).getText();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
+
+
+
+
+
+
+
+
+
+

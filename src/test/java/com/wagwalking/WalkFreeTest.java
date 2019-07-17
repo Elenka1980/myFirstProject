@@ -17,7 +17,7 @@ public class WalkFreeTest extends BaseTest{
         promotionWalkFreePage.inputEmail(user.getEmail());
         promotionWalkFreePage.inputPassword(user.getPassward());
         promotionWalkFreePage.inputFirstName(user.getFirstName());
-        promotionWalkFreePage.inputTel(user.getCellPhone());
+        promotionWalkFreePage.inputCellPhone(user.getCellPhone());
 
     }
 
