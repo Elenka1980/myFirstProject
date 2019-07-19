@@ -22,6 +22,4 @@ public class WalkFreeTest extends BaseTest{
     }
 
 
-
-
 }

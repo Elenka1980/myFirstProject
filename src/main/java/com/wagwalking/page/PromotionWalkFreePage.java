@@ -27,6 +27,13 @@ public class PromotionWalkFreePage extends BasePage{
     @FindBy(css = "input[type = \"tel")
     WebElement cellPhoneField;
 
+    @FindBy(css = ".sc-bdVaJa.sc-iwsKbI.kOShw")
+    private WebElement existEmailNote;
+
+    @FindBy(css = ".sc-gzVnrw.jvIbBW")
+    private WebElement nextButtonField;
+
+
 
     @FindBy(css = ".sc-bdVaJa.sc-iwsKbI.kOShw")
     private List<WebElement>requiredFields;
@@ -48,6 +55,17 @@ public class PromotionWalkFreePage extends BasePage{
     [2] - 1 Number
 
   */
+
+
+    public void inputNextButton(String nextButton) {
+
+        nextButtonField.sendKeys(nextButton);
+    }
+
+    public void inputExistEmail(String existEmail) {
+
+        existEmailNote.sendKeys(existEmail);
+    }
 
     public void inputEmail(String email) {
 
@@ -74,6 +92,17 @@ public class PromotionWalkFreePage extends BasePage{
     }
 
 
+
+    public void clickNextButtonField() {
+        nextButtonField.click();
+    }
+
+    public String clickExistMailField() {
+        existEmailNote.click();
+        return existEmailNote.getText();
+
+    }
+
     public void clickEmailField() {
         emailField.click();
     }
@@ -94,6 +123,12 @@ public class PromotionWalkFreePage extends BasePage{
 
     }
 
+    public String getExistEmailNote() {return existEmailNote.getText(); }
+
+    public String getExistEmailField() {return getExistEmailField(); }
+
+
+
     public String getRequiredEmail() {
         return requiredFields.get(0).getText();
     }
@@ -109,6 +144,7 @@ public class PromotionWalkFreePage extends BasePage{
 
 
 
+
     public String getPasswordField8Characters() {
         return verifyPassward.get(0).getText();
     }
@@ -117,6 +153,7 @@ public class PromotionWalkFreePage extends BasePage{
     }
     public String getPasswordField1Number() {
         return verifyPassward.get(2).getText();
+
     }
 
 

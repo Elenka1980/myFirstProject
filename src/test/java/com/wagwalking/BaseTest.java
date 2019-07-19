@@ -36,7 +36,7 @@ public class BaseTest {
     @After
     public void quit() {
         System.out.println("Finish");
-        driver.quit();
+        /*driver.quit();*/
 
     }
 
