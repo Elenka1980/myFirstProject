@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
@@ -16,11 +18,14 @@ public class HomePage extends BasePage {
     @FindBy(css = ".sc-ifAKCX.jlgKgQ")
     private WebElement becomeWalkerButton;
 
+    @FindBy(css = ".sc-bdVaJa:nth-child(5) > .sc-bZQynM > .sc-bdVaJa .sc-ifAKCX")
+    private WebElement loginButton;
+
+
     public BecomeWalkerPage clickBecomeWalkerButton() {
         becomeWalkerButton.click();
         return new BecomeWalkerPage(driver);
     }
-
 
     public PromotionWalkFreePage clickWalkFreeButton() {
         walkFreeButton.click();
@@ -31,6 +36,11 @@ public class HomePage extends BasePage {
         becomeWalkerButton.click();
         return new BecomeWalkerPage(driver);
     }
+    public LoginPage clickLoginButton() {
+        loginButton.click();
+        return new LoginPage(driver);
+    }
+
 
 
 
