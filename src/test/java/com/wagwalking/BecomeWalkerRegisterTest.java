@@ -1,10 +1,7 @@
 package com.wagwalking;
-
-import com.wagwalking.page.BasePage;
 import com.wagwalking.page.BecomeWalkerPage;
 import com.wagwalking.page.HomePage;
 import org.junit.Test;
-
 import java.util.Random;
 
 public class BecomeWalkerRegisterTest extends BaseTest {

@@ -40,6 +40,8 @@ public class BecomeWalkerRequiredFieldTest extends BaseTest {
         System.out.println(phoneNumber);
         Assert.assertEquals("Enter a valid phone number", phoneNumber);
 
+        
+
 
 
     }

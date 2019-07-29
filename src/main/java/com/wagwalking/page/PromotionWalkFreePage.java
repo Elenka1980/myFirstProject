@@ -157,39 +157,30 @@ public class PromotionWalkFreePage extends BasePage{
         return verifyPassward.get(0).getText();
     }
     public String getPasswordField1Letter() {
+
         return verifyPassward.get(1).getText();
     }
     public String getPasswordField1Number() {
+
         return verifyPassward.get(2).getText();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public String getEmailField() {
+        return emailField.getAttribute("value");
+    }
+    public String getPassWordField()
+    { return passwordField.getAttribute("value");
+    }
+    public String getFirstNameField() {
+        return firstNameField.getAttribute("value");
+    }
+    public String getLastNameField() {
+        return lastNameField.getAttribute("value");
+    }
+    public String getCellPhoneField() {
+        return cellPhoneField.getAttribute("value");
+    }
 
 
 
 
 }
-
-
-
-
-
-
-
-
-
-

@@ -100,8 +100,4 @@ public class BecomeWalkerPage extends BasePage{
 
 
 
-
-
-
-
 }
